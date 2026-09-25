@@ -1,23 +1,82 @@
 aid: angeleyecamerasystems
+
 name: Angeleyecamerasystems
-description: 'Angeleyecamerasystems is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.angeleyehealth.com/wp-content/uploads/bg-hero-home02-1024x514.png
+
+description: AngelEye Health provides a complete HIPAA‑compliant NICU patient engagement platform that integrates parents into the child’s care
+  team, offering camera‑based monitoring, milk‑tracker, and digital road‑map solutions to empower families and support care teams across over
+  350 hospitals. The platform includes AI‑driven insights, secure data handling, and a suite of tools for clinicians and families alike, aiming
+  to improve outcomes and streamline NICU discharge processes.
+
 url: https://raw.githubusercontent.com/api-evangelist/angeleyecamerasystems/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
-- Company
-apis: []
+- NICU
+- Camera System
+- Feeding Management
+- Hospital Solutions
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Compliance
+  url: https://trust.angeleyehealth.com/
+- type: Hosts
+  url: hosts/angeleyecamerasystems-hosts.yml
+- type: Vendors
+  url: vendors/angeleyecamerasystems-vendors.yml
+- type: Support
+  url: https://www.angeleyehealth.com/support/
+- type: StatusPage
+  url: https://status.angeleyehealth.com/
+- type: PrivacyPolicy
+  url: https://www.angeleyehealth.com/privacy-notice/
+- type: Blog
+  url: https://www.angeleyehealth.com/blog/
+- type: TrustCenter
+  url: security/angeleyecamerasystems-trust-center.yml
+- type: DomainSecurity
+  url: security/angeleyecamerasystems-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/angeleyecamerasystems
+  url: https://www.angeleyehealth.com
+
+apis:
+- name: AngelEye Health API
+  description: API surface not documented publicly
+  humanURL: https://www.angeleyehealth.com
+  baseURL: null
+  aid: angeleyecamerasystems:angeleye-health-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine‑readable contract found at common endpoints (e.g., https://api.angeleyehealth.com/openapi.json returned
+    404)
+  evidence:
+  - url: https://api.angeleyehealth.com/openapi.json
+    status: 404
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

@@ -1,0 +1,70 @@
+generated: '2026-09-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 4
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - status
+  - website
+hosts:
+- host: api.angeleyehealth.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: angeleyehealth.com
+  role: api
+  relation: own
+- host: status.angeleyehealth.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: angeleyehealth.com
+  role: status
+  relation: own
+- host: trust.angeleyehealth.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Compliance
+  serves: []
+  registrable_domain: angeleyehealth.com
+  role: other
+  relation: own
+- host: www.angeleyehealth.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Support
+  - PrivacyPolicy
+  - Blog
+  - Website
+  serves:
+  - docs
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: angeleyehealth.com
+  role: website
+  relation: own
